@@ -1,0 +1,63 @@
+{
+	"folders": [
+		{
+			"name": "DEV",
+			"path": "."
+		},
+		{
+			"name": "APP",
+			"path": "./LevelthanQ-APP"
+		},
+		{
+			"name": "SDB",
+			"path": "./LevelthanQ-SDB"
+		},
+		{
+			"name": "TRX",
+			"path": "./LevelthanQ-TRX"
+		},
+		{
+			"name": "EXE",
+			"path": "./LevelthanQ-EXE"
+		},
+		{
+			"name": "PWA",
+			"path": "./LevelthanQ-PWA"
+		},
+		{
+			"name": "PKG",
+			"path": "./LevelthanQ-PKG"
+		},
+		{
+			"name": "WEB",
+			"path": "./LevelthanQ-WEB"
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"LevelthanQ-APP": true,
+			"LevelthanQ-SDB": true,
+			"LevelthanQ-TRX": true,
+			"LevelthanQ-EXE": true,
+			"LevelthanQ-PWA": true,
+			"LevelthanQ-PKG": true,
+			"LevelthanQ-WEB": true
+		}
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Setup: Clone & Install All Repos",
+				"type": "shell",
+				"command": "pwsh",
+				"args": [
+					"-NoProfile",
+					"-File",
+					"${workspaceFolder:DEV}/scripts/setup.ps1"
+				],
+				"problemMatcher": []
+			}
+		]
+	}
+}
